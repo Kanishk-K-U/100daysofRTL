@@ -1,0 +1,99 @@
+$date
+	Fri Aug 18 23:15:08 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module alu_tb $end
+$var wire 8 ! out [7:0] $end
+$var reg 4 " in1 [3:0] $end
+$var reg 4 # in2 [3:0] $end
+$var reg 2 $ opcode [1:0] $end
+$scope module dut $end
+$var wire 4 % in1 [3:0] $end
+$var wire 4 & in2 [3:0] $end
+$var wire 2 ' opcode [1:0] $end
+$var parameter 2 ( ADD $end
+$var parameter 2 ) MUL $end
+$var parameter 2 * SUB $end
+$var parameter 2 + XOR_BIT $end
+$var reg 8 , out [7:0] $end
+$var reg 1 - temp_car0 $end
+$var reg 1 . temp_car1 $end
+$var reg 1 / temp_car2 $end
+$var reg 1 0 temp_out0 $end
+$var reg 1 1 temp_out1 $end
+$var reg 1 2 temp_out2 $end
+$var reg 1 3 temp_out3 $end
+$var reg 1 4 temp_out4 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 +
+b1 *
+b10 )
+b0 (
+$end
+#0
+$dumpvars
+04
+03
+02
+01
+00
+0/
+0.
+0-
+b0 ,
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#5
+b101 !
+b101 ,
+12
+1.
+1-
+10
+b110 #
+b110 &
+b1011 "
+b1011 %
+b1 $
+b1 '
+#10
+b10011 !
+b10011 ,
+14
+1/
+02
+0.
+11
+0-
+b111 #
+b111 &
+b1100 "
+b1100 %
+b0 $
+b0 '
+#15
+b1010100 !
+b1010100 ,
+b10 $
+b10 '
+#20
+b1011 !
+b1011 ,
+b11 $
+b11 '
+#25

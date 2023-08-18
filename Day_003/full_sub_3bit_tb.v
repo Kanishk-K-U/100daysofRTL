@@ -4,8 +4,6 @@ module full_sub_3bit_tb;
   reg BI;
   wire [2:0] Sub;
   wire BO;
-
-  // Instantiate the DUT (Design Under Test)
   full_sub_3bit DUT(
     .Sub(Sub),
     .BO(BO),
