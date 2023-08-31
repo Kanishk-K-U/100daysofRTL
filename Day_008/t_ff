@@ -1,0 +1,107 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x13760ab50 .scope module, "T_ff_tb" "T_ff_tb" 2 1;
+ .timescale 0 0;
+v0x137622080_0 .var "T_in", 0 0;
+v0x137622110_0 .net "T_out", 0 0, v0x137621a70_0;  1 drivers
+v0x1376221e0_0 .var "clk", 0 0;
+v0x1376222b0_0 .var "rst", 0 0;
+S_0x13760acc0 .scope module, "uut" "T_ff" 2 6, 3 1 0, S_0x13760ab50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "T_in";
+    .port_info 3 /OUTPUT 1 "T_out";
+L_0x137622380 .functor NOT 1, v0x137622080_0, C4<0>, C4<0>, C4<0>;
+v0x137621cc0_0 .net "T_in", 0 0, v0x137622080_0;  1 drivers
+v0x137621d70_0 .net "T_out", 0 0, v0x137621a70_0;  alias, 1 drivers
+v0x137621e10_0 .net "clk", 0 0, v0x1376221e0_0;  1 drivers
+v0x137621ee0_0 .net "rst", 0 0, v0x1376222b0_0;  1 drivers
+v0x137621f90_0 .net "temp", 0 0, L_0x137622380;  1 drivers
+S_0x1376082a0 .scope module, "d1" "D_FF" 3 8, 3 12 0, S_0x13760acc0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "D_in";
+    .port_info 3 /OUTPUT 1 "D_out";
+v0x137608410_0 .net "D_in", 0 0, L_0x137622380;  alias, 1 drivers
+v0x137621a70_0 .var "D_out", 0 0;
+v0x137621b10_0 .net "clk", 0 0, v0x1376221e0_0;  alias, 1 drivers
+v0x137621bc0_0 .net "rst", 0 0, v0x1376222b0_0;  alias, 1 drivers
+E_0x137608dc0 .event posedge, v0x137621b10_0;
+    .scope S_0x1376082a0;
+T_0 ;
+    %wait E_0x137608dc0;
+    %load/vec4 v0x137621bc0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x137621a70_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x137608410_0;
+    %assign/vec4 v0x137621a70_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x13760ab50;
+T_1 ;
+    %vpi_call 2 14 "$dumpfile", "t_ff.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x13760ab50 {0 0 0};
+    %vpi_call 2 16 "$monitor", $time, " rst=%b, T_in=%b, T_out=%b", v0x1376222b0_0, v0x137622080_0, v0x137622110_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1376221e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1376222b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137622080_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1376222b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137622080_0, 0, 1;
+    %delay 13, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1376222b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137622080_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1376222b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137622080_0, 0, 1;
+    %delay 25, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1376222b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137622080_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1376222b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137622080_0, 0, 1;
+    %delay 14, 0;
+    %vpi_call 2 42 "$stop" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x13760ab50;
+T_2 ;
+    %delay 5, 0;
+    %load/vec4 v0x1376221e0_0;
+    %inv;
+    %store/vec4 v0x1376221e0_0, 0, 1;
+    %jmp T_2;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "T_ff_tb.v";
+    "T_ff.v";
