@@ -1,0 +1,125 @@
+$date
+	Mon Sep  4 23:10:34 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_rca $end
+$var wire 8 ! sum [7:0] $end
+$var wire 1 " cout $end
+$var parameter 32 # N $end
+$var reg 8 $ a [7:0] $end
+$var reg 8 % b [7:0] $end
+$var reg 1 & c $end
+$scope module uut $end
+$var wire 8 ' a [7:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 1 & c $end
+$var wire 8 ) sum [7:0] $end
+$var wire 1 " cout $end
+$var wire 9 * carry [8:0] $end
+$var parameter 32 + N $end
+$scope begin fa_loop[0] $end
+$var wire 1 , t1 $end
+$var wire 1 - t2 $end
+$var wire 1 . t3 $end
+$var parameter 2 / i $end
+$upscope $end
+$scope begin fa_loop[1] $end
+$var wire 1 0 t1 $end
+$var wire 1 1 t2 $end
+$var wire 1 2 t3 $end
+$var parameter 2 3 i $end
+$upscope $end
+$scope begin fa_loop[2] $end
+$var wire 1 4 t1 $end
+$var wire 1 5 t2 $end
+$var wire 1 6 t3 $end
+$var parameter 3 7 i $end
+$upscope $end
+$scope begin fa_loop[3] $end
+$var wire 1 8 t1 $end
+$var wire 1 9 t2 $end
+$var wire 1 : t3 $end
+$var parameter 3 ; i $end
+$upscope $end
+$scope begin fa_loop[4] $end
+$var wire 1 < t1 $end
+$var wire 1 = t2 $end
+$var wire 1 > t3 $end
+$var parameter 4 ? i $end
+$upscope $end
+$scope begin fa_loop[5] $end
+$var wire 1 @ t1 $end
+$var wire 1 A t2 $end
+$var wire 1 B t3 $end
+$var parameter 4 C i $end
+$upscope $end
+$scope begin fa_loop[6] $end
+$var wire 1 D t1 $end
+$var wire 1 E t2 $end
+$var wire 1 F t3 $end
+$var parameter 4 G i $end
+$upscope $end
+$scope begin fa_loop[7] $end
+$var wire 1 H t1 $end
+$var wire 1 I t2 $end
+$var wire 1 J t3 $end
+$var parameter 4 K i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b111 K
+b110 G
+b101 C
+b100 ?
+b11 ;
+b10 7
+b1 3
+b0 /
+b1000 +
+b1000 #
+$end
+#0
+$dumpvars
+0J
+1I
+0H
+0F
+0E
+1D
+0B
+0A
+1@
+0>
+0=
+0<
+0:
+19
+08
+06
+05
+14
+02
+01
+10
+0.
+0-
+0,
+b100010000 *
+b1110110 )
+b11001100 (
+b10101010 '
+0&
+b11001100 %
+b10101010 $
+1"
+b1110110 !
+$end
+#10
