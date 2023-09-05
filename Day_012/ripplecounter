@@ -1,0 +1,102 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x140e0b020 .scope module, "tb_ripplecounter" "tb_ripplecounter" 2 1;
+ .timescale 0 0;
+v0x140e225d0_0 .var "clk", 0 0;
+v0x140e22660_0 .var "clr", 0 0;
+v0x140e226f0_0 .net "count", 7 0, L_0x140e23520;  1 drivers
+S_0x140e0b190 .scope module, "uut" "ripplecounter" 2 5, 3 16 0, S_0x140e0b020;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 8 "count";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "clr";
+UDP_t_ff .udp/sequ "t_ff", 2, 2
+ ,"??10"
+ ,"??f-"
+ ,"1f00"
+ ,"0f01"
+ ,"?P0-";
+L_0x140e22780 .udp UDP_t_ff, v0x140e225d0_0, v0x140e22660_0;
+L_0x140e22a90 .udp UDP_t_ff, L_0x140e229b0, v0x140e22660_0;
+L_0x140e22be0 .udp UDP_t_ff, L_0x140e22b40, v0x140e22660_0;
+L_0x140e22e70 .udp UDP_t_ff, L_0x140e22d50, v0x140e22660_0;
+L_0x140e22fc0 .udp UDP_t_ff, L_0x140e22f20, v0x140e22660_0;
+L_0x140e23180 .udp UDP_t_ff, L_0x140e230b0, v0x140e22660_0;
+L_0x140e232f0 .udp UDP_t_ff, L_0x140e23250, v0x140e22660_0;
+L_0x140e238e0 .udp UDP_t_ff, L_0x140e23840, v0x140e22660_0;
+v0x140e11a20_0 .net *"_ivl_0", 0 0, L_0x140e22780;  1 drivers
+v0x140e21880_0 .net *"_ivl_10", 0 0, L_0x140e22e70;  1 drivers
+v0x140e21930_0 .net *"_ivl_13", 0 0, L_0x140e22d50;  1 drivers
+v0x140e219f0_0 .net *"_ivl_14", 0 0, L_0x140e22fc0;  1 drivers
+v0x140e21aa0_0 .net *"_ivl_17", 0 0, L_0x140e22f20;  1 drivers
+v0x140e21b90_0 .net *"_ivl_18", 0 0, L_0x140e23180;  1 drivers
+v0x140e21c40_0 .net *"_ivl_2", 0 0, L_0x140e22a90;  1 drivers
+v0x140e21cf0_0 .net *"_ivl_21", 0 0, L_0x140e230b0;  1 drivers
+v0x140e21da0_0 .net *"_ivl_22", 0 0, L_0x140e232f0;  1 drivers
+v0x140e21eb0_0 .net *"_ivl_25", 0 0, L_0x140e23250;  1 drivers
+v0x140e21f60_0 .net *"_ivl_26", 0 0, L_0x140e238e0;  1 drivers
+v0x140e22010_0 .net *"_ivl_30", 0 0, L_0x140e23840;  1 drivers
+v0x140e220c0_0 .net *"_ivl_5", 0 0, L_0x140e229b0;  1 drivers
+v0x140e22170_0 .net *"_ivl_6", 0 0, L_0x140e22be0;  1 drivers
+v0x140e22220_0 .net *"_ivl_9", 0 0, L_0x140e22b40;  1 drivers
+v0x140e222d0_0 .net "clk", 0 0, v0x140e225d0_0;  1 drivers
+v0x140e22370_0 .net "clr", 0 0, v0x140e22660_0;  1 drivers
+v0x140e22500_0 .net "count", 7 0, L_0x140e23520;  alias, 1 drivers
+L_0x140e229b0 .part L_0x140e23520, 0, 1;
+L_0x140e22b40 .part L_0x140e23520, 1, 1;
+L_0x140e22d50 .part L_0x140e23520, 2, 1;
+L_0x140e22f20 .part L_0x140e23520, 3, 1;
+L_0x140e230b0 .part L_0x140e23520, 4, 1;
+L_0x140e23250 .part L_0x140e23520, 5, 1;
+LS_0x140e23520_0_0 .concat8 [ 1 1 1 1], L_0x140e22780, L_0x140e22a90, L_0x140e22be0, L_0x140e22e70;
+LS_0x140e23520_0_4 .concat8 [ 1 1 1 1], L_0x140e22fc0, L_0x140e23180, L_0x140e232f0, L_0x140e238e0;
+L_0x140e23520 .concat8 [ 4 4 0 0], LS_0x140e23520_0_0, LS_0x140e23520_0_4;
+L_0x140e23840 .part L_0x140e23520, 6, 1;
+    .scope S_0x140e0b020;
+T_0 ;
+    %delay 5, 0;
+    %load/vec4 v0x140e225d0_0;
+    %inv;
+    %store/vec4 v0x140e225d0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x140e0b020;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x140e225d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x140e22660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x140e22660_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x140e22660_0, 0, 1;
+    %pushi/vec4 10, 0, 32;
+T_1.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_1.1, 5;
+    %jmp/1 T_1.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %delay 10, 0;
+    %vpi_call 2 14 "$display", "Counter Value: %b => %d", v0x140e226f0_0, v0x140e226f0_0 {0 0 0};
+    %jmp T_1.0;
+T_1.1 ;
+    %pop/vec4 1;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "ripplecounter_tb.v";
+    "ripplecounter.v";

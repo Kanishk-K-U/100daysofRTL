@@ -1,0 +1,75 @@
+$date
+	Tue Sep  5 18:55:49 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module majority16_tb $end
+$var wire 1 ! Out $end
+$var reg 16 " Data [0:15] $end
+$scope module uut $end
+$var wire 16 # Data [0:15] $end
+$var wire 1 ! Out $end
+$var reg 5 $ count [0:4] $end
+$var reg 5 % i [0:4] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+bx $
+bx #
+bx "
+x!
+$end
+#5
+1!
+b10000 %
+b1001 $
+b1001000101111101 "
+b1001000101111101 #
+#15
+0!
+b10000 %
+b1000 $
+b101010101010101 "
+b101010101010101 #
+#30
+1!
+b10000 %
+b1010 $
+b1111001101010101 "
+b1111001101010101 #
+#50
+b10000 %
+b1011 $
+b10111111011110 "
+b10111111011110 #
+#75
+b10000 %
+b10000 $
+b1111111111111111 "
+b1111111111111111 #
+#105
+b10000 %
+b1100 $
+b1111010110101111 "
+b1111010110101111 #
+#140
+0!
+b10000 %
+b111 $
+b1111100000110000 "
+b1111100000110000 #
+#180
+b10000 %
+b0 $
+b0 "
+b0 #
