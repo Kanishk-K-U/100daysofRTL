@@ -1,0 +1,111 @@
+$date
+	Wed Sep  6 22:02:28 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cyclic_lamp_tb $end
+$var wire 3 ! out [0:2] $end
+$var reg 1 " clk $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var parameter 3 # GREEN $end
+$var parameter 3 $ RED $end
+$var parameter 32 % S0 $end
+$var parameter 32 & S1 $end
+$var parameter 32 ' S2 $end
+$var parameter 3 ( YELLOW $end
+$var reg 3 ) out [2:0] $end
+$var reg 2 * state [0:1] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 (
+b10 '
+b1 &
+b0 %
+b100 $
+b10 #
+$end
+#0
+$dumpvars
+bx *
+bx )
+0"
+bx !
+$end
+#5
+b100 !
+b100 )
+b0 *
+1"
+#10
+0"
+#15
+b1 !
+b1 )
+b1 *
+1"
+#20
+0"
+#25
+b10 !
+b10 )
+b10 *
+1"
+#30
+0"
+#35
+b100 !
+b100 )
+b0 *
+1"
+#40
+0"
+#45
+b1 !
+b1 )
+b1 *
+1"
+#50
+0"
+#55
+b10 !
+b10 )
+b10 *
+1"
+#60
+0"
+#65
+b100 !
+b100 )
+b0 *
+1"
+#70
+0"
+#75
+b1 !
+b1 )
+b1 *
+1"
+#80
+0"
+#85
+b10 !
+b10 )
+b10 *
+1"
+#90
+0"
+#95
+b100 !
+b100 )
+b0 *
+1"
+#100
+0"
