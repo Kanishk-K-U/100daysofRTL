@@ -1,1 +1,4 @@
+.vscode/
+.gitignore
+.DS_Store
 100daysofRTL.code-workspace
